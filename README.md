@@ -107,4 +107,9 @@ Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` f
 
 ---
 
-Happy coding!
+*Credits*
+
+Codemy.com's youtube channel, without whoms extensive tutorials surround Django and Python I never would've completed this project.
+https://www.youtube.com/@Codemycom
+
+Pexels for images.
