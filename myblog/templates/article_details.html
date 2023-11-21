@@ -21,6 +21,11 @@
     <br>
     {% if post.header_image %}
         <img src="{{ post.header_image.url }}" alt="">
+        
+    {% else %}
+        <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" 
+        alt="Placeholder Image" width="600" height="400">
+
     {% endif %}
      <br><br>
     {{ post.body|safe }}
