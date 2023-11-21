@@ -2,29 +2,53 @@
 
 {%  block content %}
 
+<head>
+    <style>
+          
+      /* Custom Styles for Images */
+      img {
+          max-width: 20%; /* Make sure images don't stretch beyond their original size */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 5px; /* Add a slight border radius to images */
+      }
+    </style>
+</head>
 
 <h1>Posts</h1>
 
 <ul>
 {% for post in object_list %}
-    <li> <a href="{% url 'article-detail' post.pk %}">{{  post.title  }}</a> 
-        - <a href="{% url 'category' post.category|slugify %}"> {{  post.category }} </a>
-        - {{  post.author  }} <br/>
-        {{  post.author.first_name  }} {{  post.author.last_name  }} -  {{ post.post_date }}
+<div class="card-deck">
+    <div class="card">
+        {% if post.header_image %}
+      <img class="card-img-top" src="{{ post.header_image.url }}" alt="Card image cap" height="250">
+      {% else %}
+      <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" 
+      alt="Placeholder Image" height="250">
+        {% endif %}
+      <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'article-detail' post.pk %}">{{  post.title  }}</h5>
+        <p class="card-text">       
+             In<a href="{% url 'category' post.category|slugify %}"> {{  post.category }} </a>
+            - {{  post.author  }} <br/>
+            {{  post.author.first_name  }} {{  post.author.last_name  }} -  {{ post.post_date }}
+        </p>
         <small>
 
-        {% if user.is_authenticated %}
-            {% if user.id == post.author.id %}            
-            -
-            <a href="{% url 'update_post' post.pk %}">(Edit)</a>
-            <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
+            {% if user.is_authenticated %}
+                {% if user.id == post.author.id %}            
+                This was posted by you:
+                <a href="{% url 'update_post' post.pk %}">(Edit)</a>
+                <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
+                {% endif %}
             {% endif %}
-        {% endif %}
-        </small>
-        <br/>
-        {{ post.snippet }}
-    </li>
-    
+            </small>
+            <br/>
+          </div>
+    </div>
+    <br><br>
+  </div>
+  <br>
 
 {% endfor %}
 </ul>
