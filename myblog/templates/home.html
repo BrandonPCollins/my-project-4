@@ -1,56 +1,84 @@
 {% extends 'base.html' %}
 
-{%  block content %}
+{% block content %}
 
-<head>
-    <style>
-          
-      /* Custom Styles for Images */
-      img {
-          max-width: 20%; /* Make sure images don't stretch beyond their original size */
-          height: auto; /* Maintain aspect ratio */
-          border-radius: 5px; /* Add a slight border radius to images */
-      }
-    </style>
-</head>
+<style>
+    /* Custom Styles for Images */
+    .card-img-top {
+        max-width: 100%;
+        height: 200px; /* Set a fixed height for the images */
+        object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire container */
+        border-radius: 5px;
+    }
+
+    /* Custom Styles for Cards */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .card-body {
+        padding: 15px;
+        height: 400px; /* Set a fixed height for the card body */
+    }
+
+    /* Custom Styles for Author and Date */
+    .author-date {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    /* Custom Styles for Edit and Delete Links */
+    .edit-delete-links {
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 5px;
+        display: block;
+    }
+</style>
 
 <h1>Posts</h1>
 
-<ul>
-{% for post in object_list %}
-<div class="card-deck">
-    <div class="card">
-        {% if post.header_image %}
-      <img class="card-img-top" src="{{ post.header_image.url }}" alt="Card image cap" height="250">
-      {% else %}
-      <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" 
-      alt="Placeholder Image" height="250">
-        {% endif %}
-      <div class="card-body">
-        <h5 class="card-title"><a href="{% url 'article-detail' post.pk %}">{{  post.title  }}</h5>
-        <p class="card-text">       
-             In<a href="{% url 'category' post.category|slugify %}"> {{  post.category }} </a>
-            - {{  post.author  }} <br/>
-            {{  post.author.first_name  }} {{  post.author.last_name  }} -  {{ post.post_date }}
-        </p>
-        <small>
-
-            {% if user.is_authenticated %}
-                {% if user.id == post.author.id %}            
-                This was posted by you:
-                <a href="{% url 'update_post' post.pk %}">(Edit)</a>
-                <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
+<div class="container">
+    <div class="row">
+        {% for post in object_list %}
+        <div class="col-md-4">
+            <div class="card">
+                {% if post.header_image %}
+                    <img class="card-img-top" src="{{ post.header_image.url }}" alt="{{ post.title }}">
+                {% else %}
+                    <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" alt="Placeholder Image" class="card-img-top">
                 {% endif %}
-            {% endif %}
-            </small>
-            <br/>
-          </div>
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a></h5>
+                    <p class="card-text">
+                        In <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a> -
+                        by {{ post.author }}<br>
+                        {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.post_date|date:"F d, Y" }}
+                    </p>
+                    <small class="author-date">
+                        {% if user.is_authenticated %}
+                            {% if user.id == post.author.id %}
+                                This was posted by you.
+                                <a href="{% url 'update_post' post.pk %}" class="edit-delete-links">(Edit)</a>
+                                <a href="{% url 'delete_post' post.pk %}" class="edit-delete-links">(Delete)</a>
+                            {% endif %}
+                        {% endif %}
+                    </small>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    <br><br>
-  </div>
-  <br>
-
-{% endfor %}
-</ul>
+</div>
 
 {% endblock %}
