@@ -61,6 +61,10 @@
                 <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a></h5>
                     <p class="card-text">
+                        {{ post.body|truncatechars:200|striptags }}
+                    </p>
+                    <p><a href="{% url 'article-detail' post.pk %}">Read more</a></p>
+                    <p class="card-text">
                         In <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a> -
                         by {{ post.author }}<br>
                         {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.post_date|date:"F d, Y" }}
