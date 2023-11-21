@@ -1,36 +1,91 @@
 {% extends 'base.html' %}
 
-{%  block content %}
+{% block content %}
 
+<style>
+    /* Custom Styles for Images */
+    .card-img-top {
+        max-width: 100%;
+        height: 200px; /* Set a fixed height for the images */
+        object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire container */
+        border-radius: 5px;
+    }
+
+    /* Custom Styles for Cards */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .card-body {
+        padding: 15px;
+        height: 400px; /* Set a fixed height for the card body */
+    }
+
+    /* Custom Styles for Author and Date */
+    .author-date {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    /* Custom Styles for Edit and Delete Links */
+    .edit-delete-links {
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 5px;
+        display: block;
+    }
+</style>
 
 {% if category_posts %}
 
-<h1>{{  cats  }} Category</h1>
+    <h1>{{ cats }} Category</h1>
 
-<ul>
-{% for post in category_posts%}
-
-    <li> <a href="{% url 'article-detail' post.pk %}">{{  post.title  }}</a> 
-        - {{  post.category }}
-        - {{  post.author  }} <br/>
-        {{  post.author.first_name  }} {{  post.author.last_name  }} -  {{ post.post_date }}
-        <small>
-
-        {% if user.is_authenticated %}            
-            -
-            <a href="{% url 'update_post' post.pk %}">(Edit)</a>
-            <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
-        {% endif %}
-        </small>
-        <br/>
-    {{  post.body|slice:":200"|safe }} </li>
-
-{% endfor %}
-</ul>
+    <div class="container">
+        <div class="row">
+            {% for post in category_posts %}
+                <div class="col-md-4">
+                    <div class="card">
+                        {% if post.header_image %}
+                            <img class="card-img-top" src="{{ post.header_image.url }}" alt="{{ post.title }}">
+                        {% else %}
+                            <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" alt="Placeholder Image" class="card-img-top">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a></h5>
+                            <p class="card-text">
+                                In <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a> -
+                                {{ post.author }}<br>
+                                {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.post_date|date:"F d, Y" }}
+                            </p>
+                            <small class="author-date">
+                                {% if user.is_authenticated %}
+                                    {% if user.id == post.author.id %}
+                                        This was posted by you.
+                                        <a href="{% url 'update_post' post.pk %}" class="edit-delete-links">(Edit)</a>
+                                        <a href="{% url 'delete_post' post.pk %}" class="edit-delete-links">(Delete)</a>
+                                    {% endif %}
+                                {% endif %}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 
 {% else %}
 
-<h1>This Page Does Not Exist</h1>
+    <h1>This Page Does Not Exist</h1>
 
 {% endif %}
 
