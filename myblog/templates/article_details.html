@@ -52,5 +52,43 @@
         {% endif %}
             - {{ total_likes }} Likes
     </form>
+    <br><br>
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+            {% if post.author.profile.profile_pic %}
+            <img src="{{ post.author.profile.profile_pic.url }}" 
+            class="card-img" class="rounded-circle" alt="Poster's Profile Picture">
+            {% else %}
+            <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700543410/360_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV_xjagkk.jpg?_s=public-apps" 
+            class="card-img" alt="Placeholder Profile Picture">
+            {% endif %}
+            </div>
+            <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{post.author.first_name}} {{post.author.last_name}}</h5>
+                <h6 class="card-title">{{post.author}}</h6>
+                <p class="card-text"><small class="text-muted">
+                    {% if post.author.profile.website_url %}
+                    <a href="{{post.author.profile.website_url}}">
+                    Website</a>
+                    {% endif %}
+
+                    {% if post.author.profile.facebook_url %}
+                    <a href="{{post.author.profile.facebook_url}}">
+                    Facebook</a>
+                    {% endif %}
+
+                    {% if post.author.profile.twitter_url %}
+                    <a href="{{post.author.profile.twitter_url}}">
+                    Twitter</a>
+                    {% endif %}
+
+                </small></p>
+                <p class="card-text">{{post.author.profile.bio}}</p>
+            </div>
+            </div>
+        </div>
+    </div>        
 
 {% endblock %}
