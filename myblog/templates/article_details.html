@@ -33,7 +33,6 @@
 
 
     <br><br>
-    <a href ="{% url 'home' %}" class="btn btn-success">Back</a>
     <br><br>
     <hr>
     <br>
@@ -100,4 +99,25 @@
         </div>
     </div>        
 
+    <br><br>
+    <hr>
+    <h2>Comments</h2>
+    <hr>
+    {% if not post.comments.all %}
+        No Comments Yet...<a href="#">Be the first?</a>
+    {% else %}
+        {% for comment in post.comments.all %}
+            <strong>
+            <hr>
+            {{ comment.name }} -
+            {{ comment.date_added }}
+            </strong>
+            <br>
+            {{ comment.body }}
+            <br>
+            <hr>
+        {% endfor %}
+    {% endif %}
+    <hr>
+    <br><br>
 {% endblock %}
