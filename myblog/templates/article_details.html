@@ -99,13 +99,16 @@
         </div>
     </div>        
 
-    <br><br>
+    <!--Comments -->
     <hr>
     <h2>Comments</h2>
     <hr>
     {% if not post.comments.all %}
-        No Comments Yet...<a href="#">Be the first?</a>
+        No Comments Yet...<a href="{% url 'add_comment' post.pk %}">Be the first?</a>
     {% else %}
+
+        <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
+        <br><br>
         {% for comment in post.comments.all %}
             <strong>
             <hr>

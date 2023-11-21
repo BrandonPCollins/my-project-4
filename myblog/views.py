@@ -1,10 +1,10 @@
 from typing import Any
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView 
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm 
-from .models import Post, Category
-from .forms import PostForm, EditForm, PasswordChangingForm
+from .models import Post, Category, Comment
+from .forms import PostForm, EditForm, PasswordChangingForm, CommentForm
 from django.urls import reverse_lazy, reverse 
 from django.http import HttpResponseRedirect 
 
@@ -63,12 +63,23 @@ class ArticleDetailView(DetailView):
         context["liked"] = liked 
         return context 
 
+class AddCommentView(CreateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = "add_comment.html"
+
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk'] 
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('article-detail', kwargs={'pk': self.kwargs['pk']})
+    
 class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = "add_post.html"
     #fields = '__all__'
-    #fields = ('title', 'body')
 
 class AddCategoryView(CreateView):
     model = Category

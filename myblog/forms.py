@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import PasswordChangeForm 
 from django.contrib.auth.models import User 
-from .models import Post, Category 
+from .models import Post, Category, Comment
 
 #Grab the Categories created in the admin panel 
 choices = Category.objects.all().values_list('name','name')
@@ -47,3 +47,12 @@ class PasswordChangingForm(PasswordChangeForm):
         model = User
         fields = ('old_password', 'new_password1', 'new_password2', )
 
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'body',)
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
