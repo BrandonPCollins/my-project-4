@@ -69,7 +69,14 @@
             <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">{{post.author.first_name}} {{post.author.last_name}}</h5>
-                <h6 class="card-title">{{post.author}}</h6>
+                <h6 class="card-title">
+                    {% if post.author.profile %}
+                        <a href="{% url 'show_profile_page' post.author.profile.id %}">
+                            {{post.author}}</a>
+                    {% else %}
+                            {{post.author}}
+                    {% endif %}
+                </h6>
                 <p class="card-text"><small class="text-muted">
                     {% if post.author.profile.website_url %}
                     <a href="{{post.author.profile.website_url}}">
