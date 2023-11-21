@@ -30,6 +30,10 @@ I did this locally so I had to set up a virtual environment on my local drive wh
 
 Heroku blah blah Cloudinary blah blah
 
+## Features (Pictures of stuff site can do)
+
+Navbar changes, post and comment and stuff
+
 ---
 
 ## Credits
