@@ -1,8 +1,10 @@
 from typing import Any
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView 
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.forms import PasswordChangeForm 
 from .models import Post, Category
-from .forms import PostForm, EditForm
+from .forms import PostForm, EditForm, PasswordChangingForm
 from django.urls import reverse_lazy, reverse 
 from django.http import HttpResponseRedirect 
 
@@ -84,3 +86,13 @@ class DeletePostView(DeleteView):
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+
+
+class PasswordsChangeView(PasswordChangeView):
+    form_class = PasswordChangingForm
+    #form_class = PasswordChangeForm 
+    success_url = reverse_lazy('password_success')
+    #success_url = reverse_lazy('home')
+
+def password_success(request):
+    return render(request, 'password_success.html', {})

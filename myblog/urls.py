@@ -1,7 +1,8 @@
 from django.urls import path
 #from . import views  
-from .views import HomeView, ArticleDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView, CategoryListView, LikeView
+from .views import HomeView, ArticleDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView, CategoryListView, LikeView, PasswordsChangeView
 from django.contrib.auth import views as auth_views 
+from . import views 
 
 urlpatterns = [
     #path('', views.home, name="home"), 
@@ -15,5 +16,7 @@ urlpatterns = [
     path('category-list', CategoryListView, name='category-list'),
     path('like/<int:pk>', LikeView, name='like_post'), 
 
-    path('<int:uid>/password/', auth_views.PasswordChangeView.as_view()),
+    path('<int:uid>/password/', PasswordsChangeView.as_view(template_name='change-password.html')),
+    path('password_success', views.password_success, name="password_success"),
+    
 ]
