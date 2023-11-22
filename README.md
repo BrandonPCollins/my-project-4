@@ -1,4 +1,4 @@
-![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/77da9c4f-318b-4099-b220-f7f5f59f5e9a)![Code Institute Logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Code Institute Logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # Welcome Code Institute Assessor, to Gamesworld!
 
