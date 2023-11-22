@@ -40,9 +40,41 @@ Agile's dynamic prioritization categorized User Stories into 'must do,' 'could d
 
 ## Deployment (hell on earth)
 
-I did this locally so I had to set up a virtual environment on my local drive which is maybe why this was so goddamned hard idk
+## Deployment
 
-Heroku blah blah Cloudinary blah blah
+### Local Deployment:
+
+1. **Set up Virtual Environment:**
+   - Create a virtual environment using virtualenv to isolate the project dependencies.
+   - Install required packages such as Django, Gunicorn, and Cloudinary within the virtual environment.
+
+2. **Project Initialization:**
+   - Create the project by running `django-admin startproject project_name` inside the virtual environment.
+   - Similarly, create the app by running `python3 manage.py startapp app_name`. For this project, two separate apps were created: 'myblog' for handling the Gamesworld blog and 'members' for managing membership and registration.
+
+3. **Database Configuration:**
+   - Utilize a database for storing migrations. In this project, Elephant SQL was used under a free tiny turtle plan. Import the database configuration into the project through the `env.py` file.
+
+### Heroku Deployment:
+
+1. **Create Heroku App:**
+   - Create a new Heroku app and link it to the Git repository for the project.
+
+2. **Heroku Configurations:**
+   - Set up Heroku Config Vars to account for necessary variables such as Cloudinary and the Database.
+
+3. **Cloudinary and Database:**
+   - Ensure Cloudinary configurations are set up correctly to handle media files.
+   - The database used in this project (Elephant SQL) should be configured in Heroku.
+
+4. **Deployment:**
+   - Deploy the project to Heroku by pushing the code to the Heroku remote repository.
+   - The project should now be accessible through the provided Heroku app URL.
+
+This deployment process ensures a smooth transition from local development to a live Heroku environment, providing a scalable and accessible platform for users.
+
+---
+
 
 ## Features (Pictures of stuff site can do)
 
