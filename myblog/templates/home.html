@@ -44,7 +44,24 @@
         margin-top: 5px;
         display: block;
     }
+
+    /* Custom Styles for Category Links */
+    .category-link {
+        color: #007bff; 
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .category-link:hover {
+        text-decoration: underline;
+    }
 </style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="The homepage of Gamsworld displaying columns of 
+    user-posted forum boards for discussion.">
+</head>
 
 <h1>Posts</h1>
 
@@ -65,7 +82,7 @@
                     </p>
                     <p><a href="{% url 'article-detail' post.pk %}">Read more</a></p>
                     <p class="card-text">
-                        In <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a> -
+                        In <a href="{% url 'category' post.category|slugify %}" class="category-link">{{ post.category }}</a> -
                         by {{ post.author }}<br>
                         {{ post.author.first_name }} {{ post.author.last_name }} - {{ post.post_date|date:"F d, Y" }}
                     </p>
