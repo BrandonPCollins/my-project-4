@@ -42,6 +42,9 @@ Gamesworld focuses on four major gaming platforms: PlayStation, Xbox, Nintendo, 
 ### User Profiles and Social Connectivity
 Users can create personalized profiles, adding a bio, profile picture, and links to their other social media accounts. This information is prominently displayed under each user's posts, fostering connections not only within the Gamesworld community but also across other social media platforms.
 
+### Post Categorisation 
+The ability to both categorise posts and search through others' posts via their category lets the user customise their viewing experience and filter what posts they wish to see and engage with.
+
 ### Content Creation and Management
 Gamesworld empowers users with CRUD (Create, Read, Update, Delete) functionality. Users can effortlessly create new posts, incorporating body text, titles, and optional header images. The ability to edit and delete posts provides users with complete control over their contributions to the site.
 
@@ -148,6 +151,12 @@ As the base web-page themselves are relatively simple, Bootstrap's built-in resp
 * The implementation of a private message system, allowing users to interact with one another directly rather than being restricted to the comment section of their posts.
 * Advanced Search Functionality to allow users to filter posts based on keywords or user profiles, rather than just the categories as on the current site.
 * A dark mode for late-night browsing.
+
+---
+
+## Bugs
+
+* The project initially had a Rich Text Editor for blog posts, with the ckeditor package both installed locally and featured in the requirements.txt. However at some point during development, it disappeared. I'm not at all sure how this happened, and couldn't manage to bring it back either. Rather where it should have been was merely a blank space. I have a feeling it has to do with the requirements.txt somehow but can neither prove this nor did my fiddling with that file return the text editor. Rather I commented out the field for the moment and restored the standard TextField in my models.py. 
 
 ---
 
