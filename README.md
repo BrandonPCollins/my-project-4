@@ -6,6 +6,8 @@
 
 ---
 
+# Gameworld
+
 Welcome to Gamesworld, a dynamic platform that combines the essence of a news aggregator and a discussion forum, catering specifically to the vibrant and ever-evolving world of video games. Much like popular platforms such as Reddit, Gamesworld is designed to be a hub for gaming enthusiasts to stay informed about the latest industry news and engage in meaningful discussions.
 
 # Key Features
@@ -44,7 +46,11 @@ Heroku blah blah Cloudinary blah blah
 
 ## Features (Pictures of stuff site can do)
 
-Navbar changes, post and comment and stuff
+### Navbar Customization
+The site's navigation bar dynamically changes based on user authentication status, providing an intuitive and personalized experience.
+
+### Post and Comment Functionality
+Users can seamlessly create, edit, and delete posts, fostering a dynamic and engaging community-driven content creation environment.
 
 ---
 
