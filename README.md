@@ -1,6 +1,9 @@
-![Code Institute Logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/77da9c4f-318b-4099-b220-f7f5f59f5e9a)![Code Institute Logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# Welcome Code Institute Assessor,
+# Welcome Code Institute Assessor, to Gamesworld!
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/73f34736-f5a6-4db4-b860-5c8a7c93d435)
+
 
 [Final Deployment Available Here](https://project-4-django-app-dee496c0d081.herokuapp.com/)
 
@@ -92,6 +95,8 @@ Users can display their own personal flair by creating their own profile page wh
 
 ## Testing
 
+### Lighthouse
+
 Testing was done manually via continuous and determined experimentation of functionality on both Desktop and Mobile Phone.
 
 ![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/a056e283-1b25-4c5b-8bea-894efa47f150)
@@ -100,12 +105,18 @@ Lighthouse Testing provided important feedback for Gamesworld, such as a lack of
 
 ![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/d7f70b09-1d29-487e-934f-9a8bdd63b036)
 
+### Responsivity
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/73f34736-f5a6-4db4-b860-5c8a7c93d435)
+
+As the base web-page themselves are relatively simple, Bootstrap's built-in responsivity was more than capable of handling my needs. An issue arouse, that I had built my site locally in Visual Code Studio and Heroku blocked all attempts to use Responsivity Websites which made it difficult to test responsivity via my usual methods. Thankfully the Google Chrome Extension [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb) is made for developers in my position and allowed me to view my site from a catalogue of different view ranges.
 
 ---
 
 ## Credits
 
 - Codemy.com's YouTube channel, whose extensive tutorials on Django and Python were instrumental in completing this project. [Codemy.com on YouTube](https://www.youtube.com/@Codemycom)
+- The creators of [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?pli=1)
 - Pexels for the placeholder images.
 - The endless threads on Stackoverflow
 - Slack, my classmates, Muinteor Alan B, Tutor Support, and my Discord friends who actually know how to code for finally getting me over the line.
