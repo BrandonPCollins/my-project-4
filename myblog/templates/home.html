@@ -14,11 +14,14 @@
     /* Custom Styles for Cards */
     .card {
         margin-bottom: 20px;
+        border: 1px solid #b7c3f3; 
+        border-radius: 10px;
     }
 
     .card-title {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
+        color: #404e5c;
     }
 
     .card-text {
@@ -56,14 +59,14 @@
         text-decoration: underline;
     }
 </style>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <meta name="description" content="The homepage of Gamesworld, the number one place 
         online for talking about games.">
 </head>
 
-<h1>Posts</h1>
+<h1 style="color: #404e5c;">Posts</h1>
 
 <div class="container">
     <div class="row">
@@ -71,16 +74,20 @@
         <div class="col-md-4">
             <div class="card">
                 {% if post.header_image %}
-                    <img class="card-img-top" src="{{ post.header_image.url }}" alt="{{ post.title }}">
+                    <a href="{% url 'article-detail' post.pk %}">
+                        <img class="card-img-top" src="{{ post.header_image.url }}" alt="{{ post.title }}">
+                    </a>
                 {% else %}
-                    <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" alt="Placeholder Image" class="card-img-top">
+                    <a href="{% url 'article-detail' post.pk %}">
+                        <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" alt="Placeholder Image" class="card-img-top">
+                    </a>
                 {% endif %}
                 <div class="card-body">
-                    <h5 class="card-title"><a href="{% url 'article-detail' post.pk %}">{{ post.title }}</a></h5>
+                    <h5 class="card-title"><a href="{% url 'article-detail' post.pk %}" style="color: #404e5c;">{{ post.title }}</a></h5>
                     <p class="card-text">
                         {{ post.body|truncatechars:200|striptags }}
                     </p>
-                    <p><a href="{% url 'article-detail' post.pk %}">Read more</a></p>
+                    <p><a href="{% url 'article-detail' post.pk %}" style="color: #007bff;">Read more</a></p>
                     <p class="card-text">
                         In <a href="{% url 'category' post.category|slugify %}" class="category-link">{{ post.category }}</a> -
                         by {{ post.author }}<br>
@@ -90,15 +97,15 @@
                         {% if user.is_authenticated %}
                             {% if user.id == post.author.id %}
                                 This was posted by you.
-                                <a href="{% url 'update_post' post.pk %}" class="edit-delete-links">(Edit)</a>
-                                <a href="{% url 'delete_post' post.pk %}" class="edit-delete-links">(Delete)</a>
+                                <a href="{% url 'update_post' post.pk %}" class="edit-delete-links" style="color: #777;">(Edit)</a>
+                                <a href="{% url 'delete_post' post.pk %}" class="edit-delete-links" style="color: #777;">(Delete)</a>
                             {% endif %}
                         {% endif %}
                     </small>
                 </div>
             </div>
         </div>
-        {% endfor %}
+                {% endfor %}
     </div>
 </div>
 
