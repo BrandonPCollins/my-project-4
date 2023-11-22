@@ -24,6 +24,13 @@ Users can create personalized profiles, adding a bio, profile picture, and links
 ### Content Creation and Management
 Gamesworld empowers users with CRUD (Create, Read, Update, Delete) functionality. Users can effortlessly create new posts, incorporating body text, titles, and optional header images. The ability to edit and delete posts provides users with complete control over their contributions to the site.
 
+### Colour Palette  
+
+I used coolors.com to generate a colour palette which I then applied to my page. While I maintained a minimalist approach to the website's design and kept the colours sparse, opting to use a plain white background, it was helpful to have a colour scheme in place that I could consult when styling the page.
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/782d5635-8d83-432b-865d-d41615233aab)
+
+
 ## Agile Development Approach
 
 Gamesworld follows Agile principles for a flexible and collaborative development process. Divided into three iterations, each represented by a Github Kanban board, the project utilized Github tools for streamlined communication and progress tracking. Custom workflows involving Milestones for Epics and Issues for User Stories provided a structured approach to project organization.
