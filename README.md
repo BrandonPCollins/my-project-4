@@ -90,6 +90,19 @@ Users can display their own personal flair by creating their own profile page wh
 
 ---
 
+## Testing
+
+Testing was done manually via continuous and determined experimentation of functionality on both Desktop and Mobile Phone.
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/a056e283-1b25-4c5b-8bea-894efa47f150)
+
+Lighthouse Testing provided important feedback for Gamesworld, such as a lack of a meta-description or links not having high enough contrast against the site's plain white background. These were swiftly remedied. The only outstanding issue was the SEO's middling score, attributed to various links not having "descriptive text". This seems an unavoidable issue on a user-driven site where the content and discussion and shaped by the users, as they have the freedom to title their posts whatever they please. Thus this issue was noted, but deemed inherent to the site's design and set aside. This was not an issue on the site's individual blog-post pages as they lacked the cascade of various links which affected the homepage's score.
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/d7f70b09-1d29-487e-934f-9a8bdd63b036)
+
+
+---
+
 ## Credits
 
 - Codemy.com's YouTube channel, whose extensive tutorials on Django and Python were instrumental in completing this project. [Codemy.com on YouTube](https://www.youtube.com/@Codemycom)
