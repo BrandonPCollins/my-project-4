@@ -1,13 +1,34 @@
-![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/77da9c4f-318b-4099-b220-f7f5f59f5e9a)![Code Institute Logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Code Institute Logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # Welcome Code Institute Assessor, to Gamesworld!
 
-![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/73f34736-f5a6-4db4-b860-5c8a7c93d435)
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/91f8e38d-add0-4b50-9392-b22a2f139be3)
 
 
 [Final Deployment Available Here](https://project-4-django-app-dee496c0d081.herokuapp.com/)
 
 ---
+
+
+- [Gamesworld](#gamesworld)
+  - [Key Features](#key-features)
+    - [News Aggregation and Sorting](#news-aggregation-and-sorting)
+    - [User Profiles and Social Connectivity](#user-profiles-and-social-connectivity)
+    - [Content Creation and Management](#content-creation-and-management)
+    - [Colour Palette](#colour-palette)
+  - [Agile Development Approach](#agile-development-approach)
+    - [Dynamic Adaptability and Continuous Improvement](#dynamic-adaptability-and-continuous-improvement)
+  - [Deployment](#deployment)
+    - [Local Deployment](#local-deployment)
+    - [Heroku Deployment](#heroku-deployment)
+  - [Features](#features)
+    - [Navbar Customization](#navbar-customization)
+    - [Post and Comment Functionality](#post-and-comment-functionality)
+    - [User Profiles](#user-profiles)
+  - [Testing](#testing)
+    - [Lighthouse](#lighthouse)
+    - [Responsivity](#responsivity)
+  - [Credits](#credits)
 
 # Gamesworld
 
@@ -20,6 +41,9 @@ Gamesworld focuses on four major gaming platforms: PlayStation, Xbox, Nintendo, 
 
 ### User Profiles and Social Connectivity
 Users can create personalized profiles, adding a bio, profile picture, and links to their other social media accounts. This information is prominently displayed under each user's posts, fostering connections not only within the Gamesworld community but also across other social media platforms.
+
+### Post Categorisation 
+The ability to both categorise posts and search through others' posts via their category lets the user customise their viewing experience and filter what posts they wish to see and engage with.
 
 ### Content Creation and Management
 Gamesworld empowers users with CRUD (Create, Read, Update, Delete) functionality. Users can effortlessly create new posts, incorporating body text, titles, and optional header images. The ability to edit and delete posts provides users with complete control over their contributions to the site.
@@ -114,9 +138,25 @@ Lighthouse Testing provided important feedback for Gamesworld, such as a lack of
 
 ### Responsivity
 
-![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/73f34736-f5a6-4db4-b860-5c8a7c93d435)
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/9345f2a2-dfb4-44b1-b1af-43bc5597220b)
 
 As the base web-page themselves are relatively simple, Bootstrap's built-in responsivity was more than capable of handling my needs. An issue arouse, that I had built my site locally in Visual Code Studio and Heroku blocked all attempts to use Responsivity Websites which made it difficult to test responsivity via my usual methods. Thankfully the Google Chrome Extension [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb) is made for developers in my position and allowed me to view my site from a catalogue of different view ranges.
+
+---
+
+## Future Features
+
+* Full CRUD Functionality for user comments, allowing users to edit and delete their comments. Further improvements to the comment system include tracking the user's comment history on their profile page, allowing users to reply to specific comments.
+* A user reporting system. For the moment I decided to eschew the need to approve comments and posts as the site is rather small, but in the future, a community sourced moderation system wherein users can report posts and comments for breaking community guidelines would be an essential feature as the site continues to grow.
+* The implementation of a private message system, allowing users to interact with one another directly rather than being restricted to the comment section of their posts.
+* Advanced Search Functionality to allow users to filter posts based on keywords or user profiles, rather than just the categories as on the current site.
+* A dark mode for late-night browsing.
+
+---
+
+## Bugs
+
+* The project initially had a Rich Text Editor for blog posts, with the ckeditor package both installed locally and featured in the requirements.txt. However at some point during development, it disappeared. I'm not at all sure how this happened, and couldn't manage to bring it back either. Rather where it should have been was merely a blank space. I have a feeling it has to do with the requirements.txt somehow but can neither prove this nor did my fiddling with that file return the text editor. Rather I commented out the field for the moment and restored the standard TextField in my models.py. 
 
 ---
 
