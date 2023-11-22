@@ -6,6 +6,18 @@
 
 ---
 
+Welcome to Gamesworld, a dynamic platform that combines the essence of a news aggregator and a discussion forum, catering specifically to the vibrant and ever-evolving world of video games. Much like popular platforms such as Reddit, Gamesworld is designed to be a hub for gaming enthusiasts to stay informed about the latest industry news and engage in meaningful discussions.
+
+# Key Features
+## News Aggregation and Sorting
+Gamesworld focuses on four leading gaming platforms: PlayStation, Xbox, Nintendo, and PC gaming. Users can easily navigate through these categories, sorting and choosing topics of interest directly from the home page. The admin panel offers flexibility, allowing administrators to introduce new discussion categories and broaden the spectrum of topics.
+
+## User Profiles and Social Connectivity
+Users can create personalized profiles, adding a bio, profile picture, and links to their other social media accounts. This information is prominently displayed under each user's posts, fostering connections not only within the Gamesworld community but also across other social media platforms.
+
+## Content Creation and Management
+Gamesworld empowers users with CRUD (Create, Read, Update, Delete) functionality. Users can effortlessly create new posts, incorporating body text, titles, and optional header images. The ability to edit and delete posts provides users with complete control over their contributions to the site.
+
 ## Agile Development Approach
 
 This video game blog project embraced Agile principles to achieve a flexible and collaborative development process. Divided into three iterations, each represented by a Github Kanban board, the project utilized Github tools for streamlined communication and progress tracking. Custom workflows involving Milestones for Epics and Issues for User Stories provided a structured approach to project organization.
