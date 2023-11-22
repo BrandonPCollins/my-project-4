@@ -72,7 +72,10 @@ This deployment process ensures a smooth transition from local development to a 
 The site's navigation bar dynamically changes based on user authentication status, providing an intuitive and personalized experience.
 
 ### Post and Comment Functionality
-Users can seamlessly create, edit, and delete posts, fostering a dynamic and engaging community-driven content creation environment.
+Users can seamlessly create, edit, and delete posts, fostering a dynamic and engaging community-driven content creation environment. They are also able to comment and interact with other users posts, with future potential CRUD capabilities for these comments.
+
+### User Profiles
+Users can display their own personal flair by creating their own profile page which will display to other users beneath any of their posts. Users can upload their own profile picture, write their own bio and include links to their own personal websites or social media platforms, encouraging users to engagement with one another across their digital footprint.
 
 ---
 
