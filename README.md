@@ -33,6 +33,8 @@ Agile's dynamic prioritization categorized User Stories into 'must do,' 'could d
 
 ## Deployment
 
+This project was initialiased using the [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
 ### Local Deployment:
 
 1. **Set up Virtual Environment:**
@@ -45,6 +47,12 @@ Agile's dynamic prioritization categorized User Stories into 'must do,' 'could d
 
 3. **Database Configuration:**
    - Utilize a database for storing migrations. In this project, Elephant SQL was used under a free tiny turtle plan. Import the database configuration into the project through the `env.py` file.
+   - Ensure the connection is operational by pushing migrations to the database and ensuring they have migrated correctly.
+  
+4. **Cloudinary:**
+   - Cloudinary is utilized in this project in this project as online storage for static files such as images users may use as their profile pictures, or as header images for their posts.
+   - Set up a free Cloudinary account and add the CLOUDINARY_URL as an environment variable in the env.py file.
+   - Hook up Cloudinary in settings.py by configuring STATICFILES_STORAGE, STATICFILES_DIRS, STATIC_ROOT 
 
 ### Heroku Deployment:
 
@@ -52,14 +60,14 @@ Agile's dynamic prioritization categorized User Stories into 'must do,' 'could d
    - Create a new Heroku app and link it to the Git repository for the project.
 
 2. **Heroku Configurations:**
-   - Set up Heroku Config Vars to account for necessary variables such as Cloudinary and the Database.
+   - Set up Heroku Config Vars to account for necessary variables such as Cloudinary URL, the Database URL and the Secret Key. Also, add DISABLE_COLLECTSTATIC with a value of 1 until final deployment.
 
 3. **Cloudinary and Database:**
    - Ensure Cloudinary configurations are set up correctly to handle media files.
    - The database used in this project (Elephant SQL) should be configured in Heroku.
 
 4. **Deployment:**
-   - Deploy the project to Heroku by pushing the code to the Heroku remote repository.
+   - Deploy the project to Heroku by pushing the code to the Heroku remote repository, setting Debug=True to Debug=False before final deployment.
    - The project should now be accessible through the provided Heroku app URL.
 
 This deployment process ensures a smooth transition from local development to a live Heroku environment, providing a scalable and accessible platform for users.
@@ -83,4 +91,5 @@ Users can display their own personal flair by creating their own profile page wh
 
 - Codemy.com's YouTube channel, whose extensive tutorials on Django and Python were instrumental in completing this project. [Codemy.com on YouTube](https://www.youtube.com/@Codemycom)
 - Pexels for the placeholder images.
+- The endless threads on Stackoverflow
 - Slack, my classmates, Muinteor Alan B, Tutor Support, and my Discord friends who actually know how to code for finally getting me over the line.
