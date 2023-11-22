@@ -141,6 +141,16 @@ As the base web-page themselves are relatively simple, Bootstrap's built-in resp
 
 ---
 
+## Future Features
+
+* Full CRUD Functionality for user comments, allowing users to edit and delete their comments. Further improvements to the comment system include tracking the user's comment history on their profile page, allowing users to reply to specific comments.
+* A user reporting system. For the moment I decided to eschew the need to approve comments and posts as the site is rather small, but in the future, a community sourced moderation system wherein users can report posts and comments for breaking community guidelines would be an essential feature as the site continues to grow.
+* The implementation of a private message system, allowing users to interact with one another directly rather than being restricted to the comment section of their posts.
+* Advanced Search Functionality to allow users to filter posts based on keywords or user profiles, rather than just the categories as on the current site.
+* A dark mode for late-night browsing.
+
+---
+
 ## Credits
 
 - Codemy.com's YouTube channel, whose extensive tutorials on Django and Python were instrumental in completing this project. [Codemy.com on YouTube](https://www.youtube.com/@Codemycom)
