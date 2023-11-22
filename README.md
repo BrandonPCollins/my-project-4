@@ -27,6 +27,8 @@ Gamesworld follows Agile principles for a flexible and collaborative development
 
 ### Dynamic Adaptability and Continuous Improvement
 
+It may seem odd that my issues are not hosted on this repository itself, though this is merely because they were initially created for an earlier iteration of this project which had to be defunct due to several unfixable errors which required me to begin the project again. However rather than recreate the user stories I transferred the project containing the issues to this repository as they were equally applicable to this project and I used them as the basis for my work in recreating the groundwork for the rebuild.
+
 Agile's dynamic prioritization categorized User Stories into 'must do,' 'could do,' and 'should do,' allowing adaptable planning to accommodate changing project requirements. Despite challenges in pre-planning content due to time constraints, the Agile approach encouraged continuous improvement. The Kanban board visually represented progress, while reflections on completed iterations facilitated insights for refining subsequent cycles, ensuring the successful and flexible development of the video game blog.
 
 ## Deployment
