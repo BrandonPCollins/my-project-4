@@ -52,8 +52,11 @@ This project was initialiased using the [Code Institute Gitpod Full Template](ht
 4. **Cloudinary:**
    - Cloudinary is utilized in this project in this project as online storage for static files such as images users may use as their profile pictures, or as header images for their posts.
    - Set up a free Cloudinary account and add the CLOUDINARY_URL as an environment variable in the env.py file.
-   - Hook up Cloudinary in settings.py by configuring STATICFILES_STORAGE, STATICFILES_DIRS, STATIC_ROOT 
+   - Hook up Cloudinary in settings.py by configuring STATICFILES_STORAGE, STATICFILES_DIRS, STATIC_ROOT, MEDIA_URL, DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage',
 
+5. **Deployment:**
+   -In the ROOT directory create a Procfile containing "web: gunicorn myblog.wsgi"
+   -Run pip3 freeze to get the requirements and copy them into a requirements.txt file.
 ### Heroku Deployment:
 
 1. **Create Heroku App:**
