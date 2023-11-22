@@ -9,30 +9,35 @@
 
 ---
 
+### Table of Contents
 
-- [Gamesworld](#gamesworld)
-  - [Key Features](#key-features)
-    - [News Aggregation and Sorting](#news-aggregation-and-sorting)
-    - [User Profiles and Social Connectivity](#user-profiles-and-social-connectivity)
-    - [Content Creation and Management](#content-creation-and-management)
-    - [Colour Palette](#colour-palette)
-  - [Agile Development Approach](#agile-development-approach)
-    - [Dynamic Adaptability and Continuous Improvement](#dynamic-adaptability-and-continuous-improvement)
-  - [Deployment](#deployment)
-    - [Local Deployment](#local-deployment)
-    - [Heroku Deployment](#heroku-deployment)
-  - [Features](#features)
-    - [Navbar Customization](#navbar-customization)
-    - [Post and Comment Functionality](#post-and-comment-functionality)
-    - [User Profiles](#user-profiles)
-  - [Testing](#testing)
-    - [Lighthouse](#lighthouse)
-    - [Responsivity](#responsivity)
-  - [Credits](#credits)
+1. [Gamesworld](#gamesworld)
+   - [Key Features](#key-features)
+      - [News Aggregation and Sorting](#news-aggregation-and-sorting)
+      - [User Profiles and Social Connectivity](#user-profiles-and-social-connectivity)
+      - [Post Categorization](#post-categorisation)
+      - [Content Creation and Management](#content-creation-and-management)
+      - [Colour Palette](#colour-palette)
+   - [Agile Development Approach](#agile-development-approach)
+      - [Dynamic Adaptability and Continuous Improvement](#dynamic-adaptability-and-continuous-improvement)
+   - [Deployment](#deployment)
+      - [Local Deployment](#local-deployment)
+      - [Heroku Deployment](#heroku-deployment)
+   - [Features](#features)
+      - [Navbar Customization](#navbar-customization)
+      - [Post and Comment Functionality](#post-and-comment-functionality)
+      - [Post Likes](#post-likes)
+      - [User Profiles](#user-profiles)
+   - [Testing](#testing)
+      - [Lighthouse](#lighthouse)
+      - [Responsivity](#responsivity)
+   - [Future Features](#future-features)
+   - [Bugs](#bugs)
+   - [Credits](#credits)
 
 # Gamesworld
 
-Welcome to Gamesworld, a dynamic platform that seamlessly blends the functions of a news aggregator and a discussion forum. Tailored for the ever-evolving world of video games, Gamesworld serves as a hub where gaming enthusiasts can stay updated on the latest industry news and engage in meaningful discussions.
+Welcome to Gamesworld, a dynamic platform that seamlessly blends the functions of a news aggregator and a discussion forum. Tailored for the ever-evolving world of video games, Gamesworld serves as a hub where gaming enthusiasts can stay updated on the latest industry news and engage in meaningful discussions. The long-term goal of this site is to foster a community of gamers by offering them a place to discuss news, upcoming releases and their own opinions. As an ever-expanding and evolving medium, gaming is a constant cycle of online discussion, and by offering a board specifically tailored to those interested in this field we can build and engaged and active user base and then begin to sell ad space on the gutters and banners of the various pages.
 
 ## Key Features
 
@@ -117,7 +122,10 @@ This deployment process ensures a smooth transition from local development to a 
 The site's navigation bar dynamically changes based on user authentication status, providing an intuitive and personalized experience.
 
 ### Post and Comment Functionality
-Users can seamlessly create, edit, and delete posts, fostering a dynamic and engaging community-driven content creation environment. They are also able to comment and interact with other users posts, with future potential CRUD capabilities for these comments.
+Users can seamlessly create, edit, and delete posts, fostering a dynamic and engaging community-driven content creation environment. They are also able to comment and interact with other users posts, with future potential CRUD capabilities for these comments. Posts are also displayed in order of their creation dates, which are displayed on the post's title card displayed on the home-page, giving the Users immediate access to the most up-to-date posts.
+
+### Post Likes
+Authenticated users can like and unlike posts which they find interesting or engaging, and these number of likes are tallied allowing users to quickly see at a glance whether the post is of a quality that they would be interested in engaging with should it be particularly lengthy.
 
 ### User Profiles
 Users can display their own personal flair by creating their own profile page which will display to other users beneath any of their posts. Users can upload their own profile picture, write their own bio and include links to their own personal websites or social media platforms, encouraging users to engagement with one another across their digital footprint.
@@ -150,6 +158,7 @@ As the base web-page themselves are relatively simple, Bootstrap's built-in resp
 * A user reporting system. For the moment I decided to eschew the need to approve comments and posts as the site is rather small, but in the future, a community sourced moderation system wherein users can report posts and comments for breaking community guidelines would be an essential feature as the site continues to grow.
 * The implementation of a private message system, allowing users to interact with one another directly rather than being restricted to the comment section of their posts.
 * Advanced Search Functionality to allow users to filter posts based on keywords or user profiles, rather than just the categories as on the current site.
+* Incorporate the number of likes into a page for sorting posts, creating a "Hot" or "Trending" page, where rather than filtering posts by their most recent upload, instead the most recent post with the highest proportion of likes are given pride of place atop the page. 
 * A dark mode for late-night browsing.
 
 ---
