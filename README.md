@@ -9,6 +9,27 @@
 
 ---
 
+
+- [Gamesworld](#gamesworld)
+  - [Key Features](#key-features)
+    - [News Aggregation and Sorting](#news-aggregation-and-sorting)
+    - [User Profiles and Social Connectivity](#user-profiles-and-social-connectivity)
+    - [Content Creation and Management](#content-creation-and-management)
+    - [Colour Palette](#colour-palette)
+  - [Agile Development Approach](#agile-development-approach)
+    - [Dynamic Adaptability and Continuous Improvement](#dynamic-adaptability-and-continuous-improvement)
+  - [Deployment](#deployment)
+    - [Local Deployment](#local-deployment)
+    - [Heroku Deployment](#heroku-deployment)
+  - [Features](#features)
+    - [Navbar Customization](#navbar-customization)
+    - [Post and Comment Functionality](#post-and-comment-functionality)
+    - [User Profiles](#user-profiles)
+  - [Testing](#testing)
+    - [Lighthouse](#lighthouse)
+    - [Responsivity](#responsivity)
+  - [Credits](#credits)
+
 # Gamesworld
 
 Welcome to Gamesworld, a dynamic platform that seamlessly blends the functions of a news aggregator and a discussion forum. Tailored for the ever-evolving world of video games, Gamesworld serves as a hub where gaming enthusiasts can stay updated on the latest industry news and engage in meaningful discussions.
