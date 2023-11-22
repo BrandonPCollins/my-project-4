@@ -2,7 +2,7 @@
 
 # Welcome Code Institute Assessor, to Gamesworld!
 
-![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/73f34736-f5a6-4db4-b860-5c8a7c93d435)
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/91f8e38d-add0-4b50-9392-b22a2f139be3)
 
 
 [Final Deployment Available Here](https://project-4-django-app-dee496c0d081.herokuapp.com/)
@@ -114,7 +114,7 @@ Lighthouse Testing provided important feedback for Gamesworld, such as a lack of
 
 ### Responsivity
 
-![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/73f34736-f5a6-4db4-b860-5c8a7c93d435)
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/9345f2a2-dfb4-44b1-b1af-43bc5597220b)
 
 As the base web-page themselves are relatively simple, Bootstrap's built-in responsivity was more than capable of handling my needs. An issue arouse, that I had built my site locally in Visual Code Studio and Heroku blocked all attempts to use Responsivity Websites which made it difficult to test responsivity via my usual methods. Thankfully the Google Chrome Extension [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb) is made for developers in my position and allowed me to view my site from a catalogue of different view ranges.
 
