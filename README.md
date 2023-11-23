@@ -181,7 +181,7 @@ As the base web-page themselves are relatively simple, Bootstrap's built-in resp
 
 ## Credits
 
-- Codemy.com's YouTube channel, whose extensive tutorials on Django and Python were instrumental in completing this project. [Codemy.com on YouTube](https://www.youtube.com/@Codemycom)
+- Codemy.com's YouTube channel, whose extensive tutorials on Django and Python were instrumental in completing this project. [Codemy.com on YouTube](https://www.youtube.com/@Codemycom) and their [tutorial on building a Django blog](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi).
 - The creators of [Responsive Viewer](https://chromewebstore.google.com/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb?pli=1)
 - Pexels for the Placeholder images. Google Image Search for the Images used in my test posts.
 - Microsoft Bing Image Creator for the image of Crash Bandicoot fighting Sonic the Hedgehog.
