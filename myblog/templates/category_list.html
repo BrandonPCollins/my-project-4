@@ -27,7 +27,7 @@
 <ul class="category-list">
     {% for item in cat_menu_list %}
         <li>
-            <h4><a href="{% url 'category' item|slugify %}">{{ item }}</a></h4>
+            <h4><a href="{% url 'category' item|slugify %}">{{ item|title }}</a></h4>
         </li>
     {% endfor %}
 </ul>
