@@ -29,6 +29,7 @@
       - [Post Likes](#post-likes)
       - [User Profiles](#user-profiles)
    - [Testing](#testing)
+      - [W3C Validator](#w3c-validator)
       - [Lighthouse](#lighthouse)
       - [Responsivity](#responsivity)
    - [Future Features](#future-features)
@@ -134,9 +135,15 @@ Users can display their own personal flair by creating their own profile page wh
 
 ## Testing
 
-### Lighthouse
+Testing was accomplished manually via continuous and determined experimentation of functionality on both Desktop and Mobile Phone.
 
-Testing was done manually via continuous and determined experimentation of functionality on both Desktop and Mobile Phone.
+### W3C Validator 
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/70ace919-fd90-4901-ab69-53ce083791a5)
+
+Multiple iterations of the site deployed on Heroku were run through the W3C Validator to ensure the HTML was error-free. This was invaluable as my CSS styling is included in the HTML files and I had misplaced it in several instances. For the curious, they were placed directly in the HTML as opposed to a CSS style sheet as I encountered several errors involving file-pathing to the style sheets, and rather decided to simplify the process for myself via direct insertion of the styling into the html files.
+
+### Lighthouse
 
 ![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/a056e283-1b25-4c5b-8bea-894efa47f150)
 
