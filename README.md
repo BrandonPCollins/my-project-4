@@ -141,7 +141,10 @@ Testing was accomplished manually via continuous and determined experimentation 
 
 ![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/70ace919-fd90-4901-ab69-53ce083791a5)
 
-Multiple iterations of the site deployed on Heroku were run through the W3C Validator to ensure the HTML was error-free. This was invaluable as my CSS styling is included in the HTML files and I had misplaced it in several instances. For the curious, they were placed directly in the HTML as opposed to a CSS style sheet as I encountered several errors involving file-pathing to the style sheets, and rather decided to simplify the process for myself via direct insertion of the styling into the html files.
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/b6c23565-6b93-4ec4-b928-ccc92c390d7e)
+
+
+Multiple iterations of the site deployed on Heroku were run through the W3C Validator to ensure the HTML was error-free. This was invaluable as my CSS styling is included in the HTML files and I had misplaced it in several instances. For the curious, they were placed directly in the HTML as opposed to a CSS style sheet as I encountered several errors involving file-pathing to the style sheets, and rather decided to simplify the process for myself via direct insertion of the styling into the html files. Likewise the W3C CSS Validator returned with no errors.
 
 ### Lighthouse
 
