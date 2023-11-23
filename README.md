@@ -28,6 +28,7 @@
       - [Post and Comment Functionality](#post-and-comment-functionality)
       - [Post Likes](#post-likes)
       - [User Profiles](#user-profiles)
+      - [If-Else Authentication](#if-else-authentication)
    - [Testing](#testing)
       - [W3C Validator](#w3c-validator)
       - [Lighthouse](#lighthouse)
@@ -130,6 +131,11 @@ Authenticated users can like and unlike posts which they find interesting or eng
 
 ### User Profiles
 Users can display their own personal flair by creating their own profile page which will display to other users beneath any of their posts. Users can upload their own profile picture, write their own bio and include links to their own personal websites or social media platforms, encouraging users to engagement with one another across their digital footprint.
+
+### If-Else Authentication
+A multitude of If-Else statements are employed based on the user's authentification state and whether their user id matches those of various posts. These are used to prevent users editing or deleting posts which are not those, and also display messages to the users should they somehow find themselves on web-pages they were never intended to access via attempting to brute-force the site using html pathing.
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/2da27344-4a9f-4ee8-8103-0ce6f27e4fae)
 
 ---
 
