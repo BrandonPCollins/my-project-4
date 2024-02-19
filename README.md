@@ -161,6 +161,10 @@ And Validate your python using the PEP8 CI Python Linter
 Use the recommended JShint Validator to validate your JS so you don't fail next time idiot
 https://jshint.com/
 
+### User Story Testing
+
+Yap some rubbish here about how all the user stories are accomplished WHICH THEY ARE ANYWAY 
+
 ### Lighthouse
 
 ![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/a056e283-1b25-4c5b-8bea-894efa47f150)
