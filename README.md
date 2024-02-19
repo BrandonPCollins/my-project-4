@@ -152,6 +152,15 @@ Testing was accomplished manually via continuous and determined experimentation 
 
 Multiple iterations of the site deployed on Heroku were run through the W3C Validator to ensure the HTML was error-free. This was invaluable as my CSS styling is included in the HTML files and I had misplaced it in several instances. For the curious, they were placed directly in the HTML as opposed to a CSS style sheet as I encountered several errors involving file-pathing to the style sheets, and rather decided to simplify the process for myself via direct insertion of the styling into the html files. Likewise the W3C CSS Validator returned with no errors.
 
+### Python 
+
+And Validate your python using the PEP8 CI Python Linter
+
+### Javascript
+
+Use the recommended JShint Validator to validate your JS so you don't fail next time idiot
+https://jshint.com/
+
 ### Lighthouse
 
 ![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/a056e283-1b25-4c5b-8bea-894efa47f150)
