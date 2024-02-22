@@ -63,9 +63,12 @@ I used coolors.com to generate a colour palette which I then applied to my page.
 
 ### Wireframe
 
-Wireframes for the Gamesworld site were created using Wireframe.cc to visualise how the final deployment of the website would appear.
+Wireframes for the Gamesworld site were created using Wireframe.cc to visualise how the final deployment of the website would appear. They were intentionally designed to be minimalistic and sleek with sparse to none visual clutter as to focus the attention of the User onto the content of the blogs themselves, thus funnelling them into engaging with the blogs via the comment section.
 
 ![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/e1a8048b-1f0c-46f4-a754-5f3ab64bae56)
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/82385f74-0c0f-4476-9211-f09a9f002164)
+
 
 ## Agile Development Approach
 
