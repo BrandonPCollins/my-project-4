@@ -32,6 +32,7 @@
    - [Testing](#testing)
       - [W3C Validator](#w3c-validator)
       - [Lighthouse](#lighthouse)
+      - [Manual Testing](#manual-testing)
       - [Responsivity](#responsivity)
    - [Future Features](#future-features)
    - [Bugs](#bugs)
@@ -149,7 +150,7 @@ A multitude of If-Else statements are employed based on the user's authentificat
 
 ## Testing
 
-Testing was accomplished manually via continuous and determined experimentation of functionality on both Desktop and Mobile Phone.
+Testing was accomplished both manually via continuous and determined experimentation of functionality on both Desktop and Mobile Phone, and automated through various online validators and tests.
 
 ### W3C Validator 
 
@@ -169,9 +170,12 @@ And Validate your python using the PEP8 CI Python Linter
 Use the recommended JShint Validator to validate your JS so you don't fail next time idiot
 https://jshint.com/
 
-### User Story Testing
+### Manual Testing
 
-Yap some rubbish here about how all the user stories are accomplished WHICH THEY ARE ANYWAY 
+The site was tested through using various web browsers including Google Chrome, Edge, and Firefox. Likewise, the site was viewed on various devices such as desktops, laptops, smartphones and tablets.
+In order to confirm the successful implementation of the User Stories manual testing was accomplished.
+
+USER STORY
 
 ### Lighthouse
 
