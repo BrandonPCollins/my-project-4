@@ -1,9 +1,9 @@
 from django import forms
-from django.contrib.auth.forms import PasswordChangeForm 
-from django.contrib.auth.models import User 
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.models import User
 from .models import Post, Category, Comment
 
-#Grab the Categories created in the admin panel 
+#Grab the Categories created in the admin panel
 choices = Category.objects.all().values_list('name','name')
 
 choice_list = []
@@ -18,7 +18,7 @@ class PostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Add your Title Here!'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Give your post a tag!'}),
-            'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id':'user', 'type':'hidden'}),            
+            'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id':'user', 'type':'hidden'}),
             #'author': forms.Select(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
@@ -48,6 +48,16 @@ class PasswordChangingForm(PasswordChangeForm):
         fields = ('old_password', 'new_password1', 'new_password2', )
 
 class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'body',)
+
+        widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
+
+class EditCommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('name', 'body',)

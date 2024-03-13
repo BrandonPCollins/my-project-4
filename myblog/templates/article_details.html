@@ -6,13 +6,13 @@
 
 {%  block content %}
     <h1>{{ post.title }}</h1>
-        <small>By: {{ post.author }} - 
-            {{ post.author.first_name }} 
+        <small>By: {{ post.author }} -
+            {{ post.author.first_name }}
             {{ post.author.last_name }}
             - {{ post.post_date }}
 
-            {% if user.is_authenticated %}     
-                {% if user.id == post.author.id %}       
+            {% if user.is_authenticated %}
+                {% if user.id == post.author.id %}
                 <a href="{% url 'update_post' post.pk %}">(Edit)</a>
                 <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
                 {% endif %}
@@ -23,9 +23,9 @@
     {% if post.header_image %}
         <img src="{{ post.header_image.url }}" alt="Post's Header Image"
         style="max-width: 100%; max-height: 400px;">
-        
+
     {% else %}
-        <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps" 
+        <img src="https://res.cloudinary.com/dchgmljz1/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1700538138/placeholder_z66v7a.jpg?_s=public-apps"
         alt="Placeholder Image" width="600" height="400">
 
     {% endif %}
@@ -39,14 +39,14 @@
     <br>
     <form action="{% url 'like_post' post.pk%}" method="POST">
         {% csrf_token %}
-        {% if user.is_authenticated %}     
+        {% if user.is_authenticated %}
 
             {% if liked %}
-            <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-small">Unlike</button> 
-            
+            <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-small">Unlike</button>
+
             {% else %}
-            <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-small">Like</button> 
-            
+            <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-small">Like</button>
+
             {% endif %}
         {% else %}
             <small><a href="{% url 'login' %}">Log in to like</a></small>
@@ -58,11 +58,11 @@
         <div class="row no-gutters">
             <div class="col-md-4">
             {% if post.author.profile.profile_pic %}
-            <img src="{{ post.author.profile.profile_pic.url }}" 
+            <img src="{{ post.author.profile.profile_pic.url }}"
             class="card-img" class="rounded-circle" alt="Poster's Profile Picture">
             {% else %}
-            <img src="{% static 'myblog/images/profile_temp.jpg' %}" 
-           
+            <img src="{% static 'myblog/images/profile_temp.jpg' %}"
+
             class="card-img" alt="Placeholder Profile Picture">
             {% endif %}
             </div>
@@ -98,7 +98,7 @@
             </div>
             </div>
         </div>
-    </div>        
+    </div>
 
     <!--Comments -->
     <hr>
@@ -113,12 +113,16 @@
         {% for comment in post.comments.all %}
             <strong>
             <hr>
-            {{ comment.name }} -
-            {{ comment.date_added }}
+            {{ comment.name }} - {{ comment.date_added }}
             </strong>
             <br>
             {{ comment.body }}
             <br>
+            {% if user.is_authenticated %}
+                {% if user.id == comment.user.id or user.is_staff %}
+                    <a href="{% url 'edit_comment' comment.id %}">(Edit)</a>
+                {% endif %}
+            {% endif %}
             <hr>
         {% endfor %}
     {% endif %}
