@@ -211,12 +211,16 @@ xi) As a user I can edit my posts so that I can fix typos or clarify what I was 
    * Confirmed by using a generic user profile to ensure they are capable of editing their own comments, and that the comments appear in their edited states after being confirmed.
 
 xii) As a User I can Change my Password so that I can alter my credentials in the event of an information leak to prevent people accessing my account.
+   * Confirmed by navigating to the Edit Profile Settings page via the navbar while logged in, and following the steps to reset the user's password.
 
 xii) As a User I can Personalise my profile page with information such as my own personal biography, a profile picture, and various personal links so that I can display my own personal flair while also providing important context and information about me as a user
+   * Confirmed by navigating to the Edit Profile page by way of the navbar and verifying all the information updates accordingly depending on what the user enters.
 
-xiv) As a USER I can view the various blog post categories so that I can quickly find posts and information relevant to my interests, while filtering out the posts I don't care about
+xiv) As a User I can view the various blog post categories so that I can quickly find posts and information relevant to my interests, while filtering out the posts I don't care about
+   * Confirmed by using the Categories dropdown in the navbar and ensuring that when clicked that the displayed posts correctly align with the category selected.
 
 xv) As an Admin I can prevent users from editing and deleting other users posts so that there is a sense of security upon the site.
+   * Confirmed utilising a variety of verification and authentication tests both built into django and custom made for the site, and ensuring they prevent users from brute-forcing their way to pages via directly typing url addresses and trying to bypass security.
 
 ### Lighthouse
 
