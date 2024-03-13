@@ -175,7 +175,48 @@ https://jshint.com/
 The site was tested through using various web browsers including Google Chrome, Edge, and Firefox. Likewise, the site was viewed on various devices such as desktops, laptops, smartphones and tablets.
 In order to confirm the successful implementation of the User Stories manual testing was accomplished.
 
-USER STORY
+### User Stories Testing
+
+i) As a site user I can view a paginated list of posts so that I can select which post I want to view
+   * Confirmed via visiting the homepage on various screens and browsers, after making posts via admin.
+
+ii) As a Site User I can view a list of posts so that I can select one to read
+   * Confirmed 
+
+iii) As a Site User I can click on a post so that I can read the full text
+   * Confirmed by clicking on various posts to ensure links are operational.
+
+iv) As a Site User / Admin I can view the number of likes on each post so that I can see which is the most popular or viral
+   * Confirmed by viewing individual post views and observing that likes are operational.
+
+v) As a Site User / Admin I can view comments on an individual post so that I can read the conversation
+   *  Confirmed by going to individual posts while logged in and viewing the comments that have been left beneath the post by other users.
+
+vi) As a Site User I can register an account so that I can comment and like
+   * Confirmed by registering for a new user account using a dummy email.
+
+vii) As a Site User I can leave comments on a post so that I can be involved in the conversation
+   * Confirmed by going to individual posts while logged in and leaving comments, and verifying they appear.
+
+viii) As a Site User I can like or unlike a post so that I can interact with the content
+   * Confirmed by using an account to like and unlike comments on individual page views.
+
+ix) As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+   * Confirmed by using the site admin account to create posts from the create post page only accessible to staff accounts, then editing that post and ensuring it updates appropriately, and then deleting said post and verifying that it is no longer viewable on the website. 
+
+x) As a Site Admin I can create draft posts so that I can finish writing the content later
+
+xi) As a Site Admin I can approve or disapprove comments so that I can filter out naughty comments
+
+xii) As a user I can edit my posts so that I can fix typos or clarify what I was speaking about.
+
+xiii) As a User I can Change my Password so that I can alter my credentials in the event of an information leak to prevent people accessing my account.
+
+xiv) As a User I can Personalise my profile page with information such as my own personal biography, a profile picture, and various personal links so that I can display my own personal flair while also providing important context and information about me as a user
+
+xv) As a USER I can view the various blog post categories so that I can quickly find posts and information relevant to my interests, while filtering out the posts I don't care about
+
+xvi) As a Admin I can prevent users from editing and deleting other users posts so that there is a sense of security upon the site.
 
 ### Lighthouse
 
