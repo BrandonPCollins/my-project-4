@@ -163,12 +163,15 @@ Multiple iterations of the site deployed on Heroku were run through the W3C Vali
 
 ### Python 
 
-And Validate your python using the PEP8 CI Python Linter
+The site's Python code was verified using https://pep8ci.herokuapp.com/. It verified that there were no severe instances of code-breaking script, and the errors it returned related to line-length and white space indentation surrounding the lines. Happily, none of these errors affected the practical application of the code itself. 
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/c9062d10-441c-4b90-88ec-e8d0a6dcb0b9)
 
 ### Javascript
 
-Use the recommended JShint Validator to validate your JS so you don't fail next time idiot
-https://jshint.com/
+The site's few instances of Javascript were tested using https://jshint.com/ and manually tested by verifying their functionality in the console logs. All script on the site is functional and fit for purpose.
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/32c87c36-daa1-4119-9b52-0dcc7277dca7)
 
 ### Manual Testing
 
