@@ -133,7 +133,10 @@ This deployment process ensures a smooth transition from local development to a 
 The site's navigation bar dynamically changes based on user authentication status, providing an intuitive and personalized experience.
 
 ### Post and Comment Functionality
-Users can seamlessly create, edit, and delete posts, fostering a dynamic and engaging community-driven content creation environment. They are also able to comment and interact with other users posts, with future potential CRUD capabilities for these comments. Posts are also displayed in order of their creation dates, which are displayed on the post's title card displayed on the home-page, giving the Users immediate access to the most up-to-date posts.
+Users can seamlessly create, edit, and delete posts, fostering a dynamic and engaging community-driven content creation environment. They are also able to comment and interact with other users posts. Currently once commented users are only able to edit their remarks but future potential CRUD capabilities alongside a reply structure for commenting on specific comments themselves are all future possibilities. Posts are also displayed in order of their creation dates, which are displayed on the post's title card displayed on the home-page, giving the Users immediate access to the most up-to-date posts.
+
+![image](https://github.com/BrandonPCollins/my-project-4/assets/131177569/5bbc7dec-0d45-4660-887f-255dc0e9d3cd)
+
 
 ### Post Likes
 Authenticated users can like and unlike posts which they find interesting or engaging, and these number of likes are tallied allowing users to quickly see at a glance whether the post is of a quality that they would be interested in engaging with should it be particularly lengthy.
@@ -243,7 +246,7 @@ As the base web-page themselves are relatively simple, Bootstrap's built-in resp
 
 ## Future Features
 
-* Full CRUD Functionality for user comments, allowing users to edit and delete their comments. Further improvements to the comment system include tracking the user's comment history on their profile page, allowing users to reply to specific comments.
+* Full CRUD Functionality for user comments, allowing users to delete their comments. Further improvements to the comment system include tracking the user's comment history on their profile page, and allowing users to reply to specific comments.
 * A user reporting system. For the moment I decided to eschew the need to approve comments and posts as the site is rather small, but in the future, a community sourced moderation system wherein users can report posts and comments for breaking community guidelines would be an essential feature as the site continues to grow.
 * The implementation of a private message system, allowing users to interact with one another directly rather than being restricted to the comment section of their posts.
 * Advanced Search Functionality to allow users to filter posts based on keywords or user profiles, rather than just the categories as on the current site.
@@ -254,7 +257,8 @@ As the base web-page themselves are relatively simple, Bootstrap's built-in resp
 
 ## Bugs
 
-* The project initially had a Rich Text Editor for blog posts, with the ckeditor package both installed locally and featured in the requirements.txt. However at some point during development, it disappeared. I'm not at all sure how this happened, and couldn't manage to bring it back either. Rather where it should have been was merely a blank space. I have a feeling it has to do with the requirements.txt somehow but can neither prove this nor did my fiddling with that file return the text editor. Rather I commented out the field for the moment and restored the standard TextField in my models.py. 
+* The project initially had a Rich Text Editor for blog posts, with the CKEditor package both installed locally and featured in the requirements.txt. However at some point during development, it disappeared. I'm not at all sure how this happened, and couldn't manage to bring it back either. Rather where it should have been was merely a blank space. I have a feeling it has to do with the requirements.txt somehow but can neither prove this nor did my fiddling with that file return the text editor. Rather I commented out the field for the moment and restored the standard TextField in my models.py.
+* The project's code is in need of refactoring relating to the CSS styling which I struggled with during the initial implementation, and am still combatting in its current forum. There's a strange interaction between the local deployment database static gathering and an inability of the code to read the local CSS styling, but can access it fine on the Heroku deployment. Fixing this will be paramount to my continued work on the CSS, as only being able to see what changes I've made 3-5 minutes after it deploys to Heroku is an unsustainable approach to development, although I'm not entirely sure why this is happening.
 
 ---
 
