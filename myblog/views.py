@@ -8,9 +8,6 @@ from .forms import PostForm, EditForm, PasswordChangingForm, CommentForm, EditCo
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 
-# def home(request):
-#     return render(request, 'home.html', {})
-
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     liked = False
@@ -27,7 +24,6 @@ class HomeView(ListView):
     model = Post
     template_name = 'home.html'
     ordering = ['-post_date'] #Newest Post First
-    #ordering = ['-id'] #Sorts by the inverse of their ID, so latest listed first
 
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
@@ -90,19 +86,16 @@ class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = "add_post.html"
-    #fields = '__all__'
 
 class AddCategoryView(CreateView):
     model = Category
     template_name = "add_category.html"
     fields = '__all__'
-    #fields = ('title', 'body')
 
 class UpdatePostView(UpdateView):
     model = Post
     form_class = EditForm
     template_name = 'update_post.html'
-    #fields = ['title', 'title_tag', 'body']
 
 class DeletePostView(DeleteView):
     model = Post
@@ -112,9 +105,7 @@ class DeletePostView(DeleteView):
 
 class PasswordsChangeView(PasswordChangeView):
     form_class = PasswordChangingForm
-    #form_class = PasswordChangeForm
     success_url = reverse_lazy('password_success')
-    #success_url = reverse_lazy('home')
 
 def password_success(request):
     return render(request, 'password_success.html', {})
